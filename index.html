@@ -30,7 +30,15 @@
         }
 
         nav {
-            flex: 1 1 200px;
+            flex: 1 1 100vw;
+            height: 100px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav a {
+            margin: 5%;
+            font-size: 20pt;
         }
 
         main {
@@ -47,9 +55,14 @@
             height: 100px;
         }
 
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
         @media screen and (max-width: 923px) {
             main {
-                height: calc(100vh - 330px);
+                height: calc(100vh - 436);
             }
 
             aside {
@@ -58,20 +71,16 @@
             }
         }
 
-        @media screen and (max-width: 717px) {
-            nav {
-                height: 100px;
-            }
-
-            main {
-                height: calc(100vh - 436px);
-            }
-        }
     </style>
 </head>
 <body>
     <header>Cabeçalho</header>
-    <nav>Manu</nav>
+    <nav>
+        <a href="#">Início</a>
+        <a href="#">Produto</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
     <main>Principal</main>
     <aside>Relacionados</aside>
     <footer>Rodape</footer>
