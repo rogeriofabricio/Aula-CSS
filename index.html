@@ -26,7 +26,6 @@
 
         header {
             flex: 1 1 100vw;
-            height: 100px;
         }
 
         header #logo {
@@ -57,7 +56,8 @@
 
         main {
             flex: 20 1 500px;
-            height: calc(100vh - 224px);
+            flex-wrap: wrap;
+            overflow: auto;
         }
 
         aside {
@@ -66,7 +66,6 @@
 
         footer {
             flex: 1 1 100vw;
-            height: 100px;
         }
 
         a {
@@ -74,14 +73,29 @@
             color: inherit;
         }
 
+        main section {
+            width: 100vw;
+            height: 2000px;
+            margin: 10px;
+            background: linear-gradient(#9a9a9a, #5a5a5a, #1a1a1a);
+        }
+
         @media screen and (max-width: 923px) {
+            header {
+                order: 1;
+            }
+
             main {
-                height: calc(100vh - 330);
+                order: 2;
             }
 
             aside {
+                order: 3;
                 flex: 1 1 100vw;
-                height: 100px;
+            }
+
+            footer {
+                order: 4;
             }
         }
 
@@ -104,7 +118,6 @@
                 position: fixed;
                 flex-direction: column;
                 width: 100vw;
-                height: 100vh;
                 background: rgba(255, 255, 255, 0.8);
                 align-items: center;
                 justify-content: center;
@@ -131,8 +144,11 @@
             <a href="#">Contato</a>
         </nav>
     </header>
-    <main>Principal</main>
     <aside>Relacionados</aside>
+    <main>
+        Principal
+        <section></section>
+    </main>
     <footer>Rodape</footer>
 
     <script type="text/javascript">
